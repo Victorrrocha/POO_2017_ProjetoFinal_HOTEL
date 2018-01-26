@@ -2,25 +2,20 @@ package esquema;
 
 public class Titular extends Cliente implements Entram{
 
-	private int senhaCartï¿½o;
+	private int senhaCartão;
 	float saldo = 0;
-	
-	public Titular(String nome, int senha, int NumeroDoQuarto, int senhaDoQuarto){
-		this.setNome(nome);
-		this.senhaCartï¿½o = senha;
-		this.setNumeroDoQuarto(NumeroDoQuarto);
-		this.setSenhaQuarto(senhaDoQuarto);
-	}
 
+	
+	
 	public void adicionarDispesas(int senha, float valor)
 	{
-		if(this.senhaCartï¿½o == senha && valor > 0)
+		if(this.getSenhaCartão() == senha && valor > 0)
 		{
 			setSaldo(valor);
 			System.out.println("Dispesas Adicionadas com sucesso!");
 		}
 		else
-			System.err.println("SENHA OU VALOR INVALIDO");
+			System.out.println("SENHA OU VALOR INVÁLIDO");
 		
 	}
 
@@ -41,10 +36,18 @@ public class Titular extends Cliente implements Entram{
 		}
 		else
 		{
-			System.err.println("Dado Incorreto");
+			System.out.println("Dado Incorreto");
 			return false;
 		}
 			
+	}
+
+	public int getSenhaCartão() {
+		return senhaCartão;
+	}
+
+	public void setSenhaCartão(int senhaDisp) {
+		this.senhaCartão = senhaDisp;
 	}
 	
 }
