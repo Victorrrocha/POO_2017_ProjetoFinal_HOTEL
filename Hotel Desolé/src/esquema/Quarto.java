@@ -1,7 +1,8 @@
 package esquema;
 
 public abstract class Quarto {
-	String pessoa;
+	
+	int numero;
 	boolean disponibilidade = true;
 	
 	public boolean verificarDisponibilidade(Quarto quart)

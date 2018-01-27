@@ -1,5 +1,7 @@
 package esquema;
 
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,6 +13,7 @@ public class Main {
 		Sistema sistema = new Sistema();
 		Scanner input = new Scanner(System.in);
 		int option = 1;
+		
 		
 		while(option != 0)
 		{
@@ -64,7 +67,7 @@ public class Main {
 				///PRECISO VALIDAR FUNCIONARIO
 				System.out.println("Digite sua senha de Funcionário");
 				int validate = input.nextInt();
-				if(sistema.validarSenha(validate) == false)
+				if(sistema.validarSenhaAt(validate) == false)
 				{
 					System.out.println("Acesso Negado");
 					break;
@@ -108,7 +111,7 @@ public class Main {
 			case 4:
 				System.out.println("Digite sua senha de Funcionário");
 				int validateAgain = input.nextInt();
-				if(sistema.validarSenha(validateAgain) == false)
+				if(sistema.validarSenhaAt(validateAgain) == false)
 				{
 					System.out.println("Acesso Negado");
 					break;
@@ -120,7 +123,7 @@ public class Main {
 			case 5:
 				System.out.println("Digite sua senha de Funcionário");
 				int validateDeNovo = input.nextInt();
-				if(sistema.validarSenha(validateDeNovo) == false)
+				if(sistema.validarSenhaAt(validateDeNovo) == false)
 				{
 					System.out.println("Acesso Negado");
 					break;

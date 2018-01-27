@@ -3,25 +3,11 @@ package esquema;
 public abstract class Funcionario {
 	private String Nome;
 	private int senha; 
-	private double Salario = 960;
-	 
-	
-	boolean pagarSalário(float Salario)
+	private double Salario = 0;
+	void pagarSalário()
 	{
-		if(Salario > 0)
-		{
-			this.setSalario(Salario);
-			return true;
-		}
-		else
-			return false;
-		
+		this.setSalario(960);
 	}
-	
-	/*public Funcionario(String nome, int senha) {
-		this.setNome(nome);
-		this.setSenha(senha);
-	}*/
 	
 	public String getNome() {
 		return Nome;
@@ -41,5 +27,11 @@ public abstract class Funcionario {
 	public void setSenha(int senha) {
 		this.senha = senha;
 	}
-	
+	public void descontar(float desconto)
+	{
+		if(this.getSalario() > desconto)
+		{
+			this.setSalario(-desconto);
+		}
+	}
 }

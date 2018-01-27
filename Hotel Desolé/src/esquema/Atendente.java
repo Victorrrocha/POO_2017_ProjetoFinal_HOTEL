@@ -1,12 +1,9 @@
 package esquema;
 
-public class Atendente extends Funcionario implements ValidarFuncionario{
+public class Atendente extends Funcionario {
 
-	@Override
-	public boolean validar(int senha) {
-		if(this.getSenha() == senha)
-			return true;
-		else
-			return false;
+	public void pagarSalário() {
+		
+		this.setSalario(1200);
 	}
 }

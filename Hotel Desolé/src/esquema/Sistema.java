@@ -1,7 +1,7 @@
 package esquema;
 import java.util.ArrayList;
 
-public class Sistema {
+public class Sistema{
 	
 	///------ FUNCIONÁRIOS ------////
 	private ArrayList<Atendente> atendentes = new ArrayList<>();
@@ -38,13 +38,11 @@ public class Sistema {
 	
 	
 	///---CHECK-IN DE CLIENTE--///
-	
 	public void cadastrarTitular(Titular tit)
 	{
 		titular.add(tit);
 		
 	}
-	
 	public void gerarQuartosSimplesDisponiveis()
 	{
 		for(int i = 1; i <= 75; i++)
@@ -72,9 +70,8 @@ public class Sistema {
 			}
 		}
 	}
-	
 	///VALIDAÇÃO DE ATENDENTE
-	public boolean validarSenha(int senha)
+	public boolean validarSenhaAt(int senha)
 	{
 		for(Atendente at : atendentes)
 		{
